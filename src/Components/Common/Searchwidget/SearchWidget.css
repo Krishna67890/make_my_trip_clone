@@ -1,0 +1,253 @@
+/* src/components/common/SearchWidget/SearchWidget.css */
+.search-widget {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.search-tabs {
+  display: flex;
+  background: #f8f9fa;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.tab {
+  flex: 1;
+  padding: 16px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  color: #6c757d;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.tab:hover {
+  background: #e9ecef;
+  color: #495057;
+}
+
+.tab.active {
+  background: white;
+  color: #4a90e2;
+}
+
+.tab.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: #4a90e2;
+}
+
+.search-content {
+  padding: 24px;
+}
+
+.search-tab-content {
+  margin-bottom: 20px;
+}
+
+.input-group {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 16px;
+  align-items: flex-end;
+}
+
+.input-field {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.input-field.full-width {
+  flex: 2;
+}
+
+.input-field label {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #495057;
+}
+
+.input-field input,
+.input-field select {
+  padding: 12px 16px;
+  border: 1px solid #ced4da;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+.input-field input:focus,
+.input-field select:focus {
+  outline: none;
+  border-color: #4a90e2;
+  box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.1);
+}
+
+.swap-button {
+  background: #f8f9fa;
+  border: 1px solid #ced4da;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin-bottom: 8px;
+  transition: all 0.3s ease;
+}
+
+.swap-button:hover {
+  background: #e9ecef;
+  transform: rotate(180deg);
+}
+
+.passenger-selector,
+.guest-selector {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  border: 1px solid #ced4da;
+  border-radius: 8px;
+  background: white;
+}
+
+.passenger-selector button,
+.guest-selector .counter button {
+  background: #f8f9fa;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.passenger-selector button:hover,
+.guest-selector .counter button:hover {
+  background: #e9ecef;
+}
+
+.guest-selector {
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.selector-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.counter {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.advanced-options-btn {
+  background: none;
+  border: none;
+  color: #4a90e2;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 8px 0;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+}
+
+.advanced-options-btn:hover {
+  text-decoration: underline;
+}
+
+.advanced-options {
+  padding: 16px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  border: 1px solid #e9ecef;
+}
+
+.multi-select {
+  height: 100px;
+}
+
+.search-button {
+  width: 100%;
+  padding: 16px;
+  background: #ff6b6b;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.search-button:hover {
+  background: #ff5252;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .search-tabs {
+    flex-wrap: wrap;
+  }
+  
+  .tab {
+    flex: 1 0 33%;
+    padding: 12px 8px;
+    font-size: 14px;
+  }
+  
+  .input-group {
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .input-field {
+    width: 100%;
+  }
+  
+  .swap-button {
+    align-self: center;
+    transform: rotate(90deg);
+  }
+  
+  .swap-button:hover {
+    transform: rotate(270deg);
+  }
+}
+
+/* Date picker customization */
+.react-datepicker-wrapper {
+  width: 100%;
+}
+
+/* Price filter customization */
+.price-filter {
+  padding: 8px 0;
+}
+
+/* Rating filter customization */
+.rating-filter {
+  display: flex;
+  gap: 8px;
+}

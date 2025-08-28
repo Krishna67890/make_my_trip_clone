@@ -1,0 +1,224 @@
+/* PromoBanner.css */
+.promo-banner {
+  position: relative;
+  width: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  margin: 20px 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #ff6b6b 0%, #ff8e53 100%);
+  color: white;
+  animation: fadeIn 0.8s ease-out;
+}
+
+.promo-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 10;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.promo-close:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(1.1);
+}
+
+.promo-container {
+  padding: 30px;
+}
+
+.promo-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.promo-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.promo-text h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin: 0 0 10px 0;
+  background: linear-gradient(45deg, #fff, #f8f9fa);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.promo-text h3 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin: 0 0 15px 0;
+}
+
+.promo-text p {
+  font-size: 1.1rem;
+  margin: 0 0 25px 0;
+  line-height: 1.5;
+  opacity: 0.9;
+}
+
+.promo-btn {
+  background: white;
+  color: #ff6b6b;
+  border: none;
+  padding: 12px 28px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.promo-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.countdown-timer {
+  margin-top: 20px;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+}
+
+.countdown {
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin: 0 5px;
+  color: #ffde59;
+}
+
+.promo-image {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.image-container {
+  width: 280px;
+  height: 280px;
+  border-radius: 16px;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  transition: transform 0.5s ease;
+  animation: float 6s ease-in-out infinite;
+}
+
+.image-container:hover {
+  transform: scale(1.03);
+}
+
+.promo-indicators {
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+  gap: 10px;
+}
+
+.indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.indicator.active {
+  background: white;
+  transform: scale(1.2);
+}
+
+.indicator:hover {
+  background: rgba(255, 255, 255, 0.7);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+  .promo-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .promo-text h2 {
+    font-size: 2rem;
+  }
+  
+  .promo-text h3 {
+    font-size: 1.5rem;
+  }
+  
+  .image-container {
+    width: 220px;
+    height: 220px;
+  }
+  
+  .countdown-timer {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .promo-container {
+    padding: 20px;
+  }
+  
+  .promo-text h2 {
+    font-size: 1.8rem;
+  }
+  
+  .promo-text h3 {
+    font-size: 1.3rem;
+  }
+  
+  .promo-text p {
+    font-size: 1rem;
+  }
+  
+  .image-container {
+    width: 180px;
+    height: 180px;
+  }
+}
