@@ -1,0 +1,759 @@
+/* TrainResults.css */
+.train-results {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f5f7fa;
+  min-height: 100vh;
+}
+
+.loading {
+  text-align: center;
+  padding: 40px;
+  font-size: 18px;
+  color: #666;
+}
+
+/* Header Styles */
+.results-header {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.results-header h2 {
+  margin: 0 0 8px 0;
+  color: #2d3748;
+  font-size: 24px;
+}
+
+.results-summary {
+  color: #718096;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.controls {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.sort-by {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.sort-by label {
+  font-weight: 500;
+  color: #4a5568;
+}
+
+.sort-by select {
+  padding: 8px 12px;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  background: white;
+  font-size: 14px;
+}
+
+/* Results Container */
+.results-container {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 20px;
+}
+
+/* Filters Sidebar */
+.filters-sidebar {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  height: fit-content;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.filters-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.filters-header h3 {
+  margin: 0;
+  color: #2d3748;
+  font-size: 18px;
+}
+
+.clear-filters {
+  background: none;
+  border: none;
+  color: #4299e1;
+  cursor: pointer;
+  font-size: 14px;
+  text-decoration: underline;
+}
+
+.clear-filters:hover {
+  color: #3182ce;
+}
+
+.filter-group {
+  margin-bottom: 25px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.filter-group:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.filter-group h4 {
+  margin: 0 0 15px 0;
+  color: #4a5568;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/* Range Slider */
+.range-slider {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.slider {
+  width: 100%;
+  height: 6px;
+  background: #e2e8f0;
+  outline: none;
+  border-radius: 3px;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #4299e1;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #4299e1;
+  cursor: pointer;
+  border: none;
+}
+
+.range-values {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: #718096;
+}
+
+/* Time Range */
+.time-options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.time-options button {
+  padding: 8px 12px;
+  border: 1px solid #e2e8f0;
+  background: white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 12px;
+  transition: all 0.2s;
+}
+
+.time-options button:hover {
+  border-color: #4299e1;
+}
+
+.time-options button.active {
+  background: #4299e1;
+  color: white;
+  border-color: #4299e1;
+}
+
+.custom-range {
+  font-size: 12px;
+  color: #718096;
+  text-align: center;
+}
+
+/* Checkbox Options */
+.checkbox-options {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.checkbox-options label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #4a5568;
+}
+
+.checkbox-options input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  accent-color: #4299e1;
+}
+
+/* Results List */
+.results-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.no-results {
+  background: white;
+  padding: 40px;
+  text-align: center;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.no-results h3 {
+  margin: 0 0 8px 0;
+  color: #2d3748;
+}
+
+.no-results p {
+  color: #718096;
+  margin: 0;
+}
+
+/* Train Card */
+.train-card {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s;
+  border: 2px solid transparent;
+}
+
+.train-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transform: translateY(-1px);
+}
+
+.train-card.selected {
+  border-color: #4299e1;
+  background: #f0f9ff;
+}
+
+.train-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.train-name h3 {
+  margin: 0 0 4px 0;
+  color: #2d3748;
+  font-size: 18px;
+}
+
+.train-number {
+  color: #718096;
+  font-size: 12px;
+}
+
+.train-operator {
+  color: #4a5568;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.train-status .status {
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.status.on-time {
+  background: #c6f6d5;
+  color: #22543d;
+}
+
+.status.delayed {
+  background: #fed7d7;
+  color: #742a2a;
+}
+
+/* Train Schedule */
+.train-schedule {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.departure, .arrival {
+  text-align: center;
+}
+
+.time {
+  font-size: 20px;
+  font-weight: 600;
+  color: #2d3748;
+  margin-bottom: 4px;
+}
+
+.station {
+  font-size: 14px;
+  color: #718096;
+}
+
+.journey {
+  text-align: center;
+}
+
+.duration {
+  font-size: 14px;
+  color: #4a5568;
+  margin-bottom: 8px;
+}
+
+.route {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.line {
+  width: 100px;
+  height: 2px;
+  background: #e2e8f0;
+  position: relative;
+}
+
+.line::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: -3px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #4299e1;
+}
+
+.line::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: -3px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #4299e1;
+}
+
+.stops {
+  position: absolute;
+  background: white;
+  padding: 0 8px;
+  font-size: 12px;
+  color: #718096;
+}
+
+/* Train Details */
+.train-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 15px;
+  background: #f7fafc;
+  border-radius: 8px;
+}
+
+.train-class {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.class {
+  font-weight: 600;
+  color: #2d3748;
+  font-size: 14px;
+}
+
+.type {
+  font-size: 12px;
+  color: #718096;
+}
+
+.amenities {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.amenity {
+  padding: 4px 8px;
+  background: #e6fffa;
+  color: #234e52;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.amenity-more {
+  padding: 4px 8px;
+  background: #ebf4ff;
+  color: #4299e1;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.seats-availability .availability {
+  padding: 6px 12px;
+  border-radius: 16px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.availability.high {
+  background: #c6f6d5;
+  color: #22543d;
+}
+
+.availability.medium {
+  background: #feebcb;
+  color: #744210;
+}
+
+.availability.low {
+  background: #fed7d7;
+  color: #742a2a;
+}
+
+/* Train Pricing */
+.train-pricing {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price-info {
+  text-align: right;
+}
+
+.original-price {
+  text-decoration: line-through;
+  color: #718096;
+  font-size: 14px;
+}
+
+.final-price {
+  font-size: 24px;
+  font-weight: 700;
+  color: #2d3748;
+  margin: 4px 0;
+}
+
+.price-note {
+  font-size: 12px;
+  color: #718096;
+}
+
+.train-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.view-details-btn, .select-btn {
+  padding: 10px 20px;
+  border: 1px solid #e2e8f0;
+  background: white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.view-details-btn:hover {
+  background: #f7fafc;
+  border-color: #cbd5e0;
+}
+
+.select-btn {
+  background: #4299e1;
+  color: white;
+  border-color: #4299e1;
+}
+
+.select-btn:hover {
+  background: #3182ce;
+  border-color: #3182ce;
+}
+
+.select-btn:disabled {
+  background: #a0aec0;
+  border-color: #a0aec0;
+  cursor: not-allowed;
+}
+
+/* Expanded Details */
+.train-details-expanded {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #e2e8f0;
+}
+
+.expanded-section {
+  margin-bottom: 20px;
+}
+
+.expanded-section h4 {
+  margin: 0 0 12px 0;
+  color: #4a5568;
+  font-size: 16px;
+}
+
+.amenities-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 8px;
+}
+
+.amenity-item {
+  padding: 8px 12px;
+  background: #f7fafc;
+  border-radius: 6px;
+  font-size: 14px;
+  color: #4a5568;
+}
+
+.seating-info {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.seat-map {
+  flex: 1;
+}
+
+.coach {
+  background: #f7fafc;
+  padding: 12px;
+  border-radius: 8px;
+}
+
+.coach-label {
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #4a5568;
+}
+
+.seats {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  gap: 4px;
+}
+
+.seat {
+  width: 12px;
+  height: 12px;
+  border-radius: 2px;
+  border: 1px solid #e2e8f0;
+}
+
+.seat.available {
+  background: #48bb78;
+}
+
+.seat.occupied {
+  background: #e53e3e;
+}
+
+.availability-detail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.available-count {
+  font-weight: 600;
+  color: #2d3748;
+}
+
+.total-count {
+  font-size: 12px;
+  color: #718096;
+}
+
+/* Selected Train Footer */
+.selected-train-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: white;
+  padding: 16px 20px;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+  border-top: 1px solid #e2e8f0;
+}
+
+.selected-details {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.selected-info h4 {
+  margin: 0 0 4px 0;
+  color: #2d3748;
+}
+
+.selected-meta {
+  font-size: 14px;
+  color: #718096;
+}
+
+.selected-meta span {
+  margin: 0 4px;
+}
+
+.selected-price {
+  text-align: right;
+}
+
+.selected-price .price {
+  font-size: 20px;
+  font-weight: 700;
+  color: #2d3748;
+  display: block;
+}
+
+.selected-price .per-passenger {
+  font-size: 12px;
+  color: #718096;
+}
+
+.book-btn {
+  padding: 12px 32px;
+  background: #48bb78;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.book-btn:hover {
+  background: #38a169;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .results-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .train-header {
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .train-schedule {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  
+  .journey {
+    order: 1;
+  }
+  
+  .train-details {
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-start;
+  }
+  
+  .train-pricing {
+    flex-direction: column;
+    gap: 16px;
+    align-items: flex-start;
+  }
+  
+  .train-actions {
+    width: 100%;
+  }
+  
+  .view-details-btn, .select-btn {
+    flex: 1;
+  }
+  
+  .selected-details {
+    flex-direction: column;
+    text-align: center;
+    gap: 12px;
+  }
+  
+  .selected-price {
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .train-results {
+    padding: 10px;
+  }
+  
+  .results-header {
+    padding: 15px;
+  }
+  
+  .train-card {
+    padding: 15px;
+  }
+  
+  .amenities {
+    justify-content: center;
+  }
+  
+  .seating-info {
+    flex-direction: column;
+  }
+}

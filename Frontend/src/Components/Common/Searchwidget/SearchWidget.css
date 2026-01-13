@@ -1,0 +1,323 @@
+/* src/components/common/SearchWidget/SearchWidget.css */
+.search-widget {
+  background: white;
+  border-radius: var(--border-radius);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.search-widget::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+  z-index: 2;
+}
+
+.search-tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 25px;
+  gap: 4px;
+  max-width: 800px;
+  margin: 0 auto 25px;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 4px;
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.tab {
+  background: transparent;
+  border: none;
+  padding: 14px 20px;
+  border-radius: 8px;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s var(--transition-base);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+  text-align: center;
+}
+
+.tab:hover {
+  background: rgba(255, 255, 255, 0.25);
+  color: white;
+}
+
+.tab.active {
+  background: white;
+  color: var(--primary);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.search-content {
+  padding: 30px;
+}
+
+.search-tab-content {
+  margin-bottom: 20px;
+}
+
+.input-group {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin-bottom: 16px;
+  align-items: end;
+}
+
+.input-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-field.full-width {
+  grid-column: 1 / -1;
+}
+
+.input-field label {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #495057;
+}
+
+.input-field input,
+.input-field select {
+  padding: 14px 16px;
+  border: 1px solid #e2e8f0;
+  border-radius: var(--border-radius);
+  font-size: 16px;
+  transition: all 0.3s ease;
+  background: #f8fafc;
+}
+
+.input-field input:focus,
+.input-field select:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(58, 134, 255, 0.2);
+  background: white;
+}
+
+.swap-button {
+  background: #f8f9fa;
+  border: 1px solid #e2e8f0;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin-bottom: 8px;
+  transition: all 0.3s ease;
+  font-size: 18px;
+}
+
+.swap-button:hover {
+  background: var(--primary);
+  color: white;
+  transform: rotate(180deg);
+  border-color: var(--primary);
+}
+
+.passenger-selector,
+.guest-selector {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  border: 1px solid #e2e8f0;
+  border-radius: var(--border-radius);
+  background: #f8fafc;
+}
+
+.passenger-selector button,
+.guest-selector .counter button {
+  background: #f1f5f9;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.2s ease;
+}
+
+.passenger-selector button:hover,
+.guest-selector .counter button:hover {
+  background: var(--primary);
+  color: white;
+  border-color: var(--primary);
+}
+
+.guest-selector {
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.selector-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.counter {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.advanced-options-btn {
+  background: none;
+  border: none;
+  color: var(--primary);
+  font-size: 14px;
+  cursor: pointer;
+  padding: 8px 0;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+}
+
+.advanced-options-btn:hover {
+  text-decoration: underline;
+}
+
+.advanced-options {
+  padding: 20px;
+  background: #f8fafc;
+  border-radius: var(--border-radius);
+  margin-bottom: 16px;
+  border: 1px solid #e2e8f0;
+}
+
+.multi-select {
+  height: 100px;
+}
+
+.search-button {
+  width: 100%;
+  padding: 16px;
+  background: var(--gradient-primary);
+  color: white;
+  border: none;
+  border-radius: var(--border-radius);
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.search-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+  z-index: -1;
+}
+
+.search-button:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.search-button:hover::before {
+  left: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .input-group {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .search-tabs {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  
+  .tab {
+    flex: 1 0 33%;
+    padding: 12px 8px;
+    font-size: 14px;
+  }
+  
+  .input-group {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  
+  .input-field {
+    width: 100%;
+  }
+  
+  .swap-button {
+    align-self: center;
+    transform: rotate(90deg);
+  }
+  
+  .swap-button:hover {
+    transform: rotate(270deg);
+  }
+}
+
+@media (max-width: 480px) {
+  .search-content {
+    padding: 20px 15px;
+  }
+  
+  .tab {
+    flex: 1 0 50%;
+    padding: 10px 6px;
+    font-size: 12px;
+  }
+  
+  .input-field input,
+  .input-field select {
+    padding: 12px;
+    font-size: 14px;
+  }
+}
+
+/* Date picker customization */
+.react-datepicker-wrapper {
+  width: 100%;
+}
+
+/* Price filter customization */
+.price-filter {
+  padding: 8px 0;
+}
+
+/* Rating filter customization */
+.rating-filter {
+  display: flex;
+  gap: 8px;
+}

@@ -1,0 +1,205 @@
+.footer-modern {
+  background: var(--gray-900);
+  padding: 80px 0 40px;
+  color: var(--white);
+  position: relative;
+  overflow: hidden;
+}
+
+.footer-top {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 4rem;
+  margin-bottom: 5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 5rem;
+}
+
+.footer-brand-area {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.footer-logo .logo-icon-bg {
+  width: 44px;
+  height: 44px;
+  background: var(--grad-primary);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba(0, 140, 255, 0.4);
+}
+
+.footer-logo .logo-text {
+  font-size: 1.75rem;
+  font-weight: 800;
+  font-family: var(--font-heading);
+}
+
+.footer-desc {
+  color: var(--gray-400);
+  font-size: 1rem;
+  line-height: 1.6;
+  max-width: 320px;
+}
+
+.social-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-pill {
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  transition: var(--transition-fast);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.social-pill:hover {
+  background: var(--primary);
+  border-color: var(--primary);
+  transform: translateY(-4px);
+  box-shadow: 0 10px 15px rgba(0, 140, 255, 0.3);
+}
+
+/* Links Grid */
+.footer-links-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.links-col h4 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: var(--white);
+}
+
+.links-col ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.links-col ul li a {
+  color: var(--gray-400);
+  font-size: 0.95rem;
+  transition: var(--transition-fast);
+}
+
+.links-col ul li a:hover {
+  color: var(--primary-light);
+  padding-left: 4px;
+}
+
+/* Newsletter */
+.newsletter-col p {
+  color: var(--gray-400);
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+}
+
+.newsletter-box {
+  display: flex;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 0.4rem;
+  border-radius: var(--radius-md);
+  transition: var(--transition-fast);
+}
+
+.newsletter-box:focus-within {
+  border-color: var(--primary);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.newsletter-box input {
+  background: transparent;
+  border: none;
+  padding: 0.6rem 1rem;
+  color: var(--white);
+  outline: none;
+  width: 100%;
+  font-size: 0.9rem;
+}
+
+.btn-subscribe {
+  background: var(--grad-primary);
+  color: var(--white);
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition-smooth);
+}
+
+.btn-subscribe:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 140, 255, 0.4);
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--gray-500);
+  font-size: 0.85rem;
+}
+
+.payment-icons {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.payment-tag {
+  font-weight: 600;
+  margin-right: 0.5rem;
+}
+
+.visa-card, .master-card, .upi-card {
+  padding: 0.25rem 0.75rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 4px;
+  font-weight: 800;
+  font-size: 0.7rem;
+  letter-spacing: 0.05em;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+@media (max-width: 1024px) {
+  .footer-top {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .footer-links-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  .footer-bottom {
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: center;
+  }
+}

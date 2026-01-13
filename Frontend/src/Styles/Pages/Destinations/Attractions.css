@@ -1,0 +1,398 @@
+.attractions-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.attractions-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.attractions-header h1 {
+  color: #333;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.attractions-header p {
+  color: #666;
+  font-size: 1.1rem;
+}
+
+.city-selector {
+  margin-bottom: 20px;
+}
+
+.city-tabs {
+  display: flex;
+  overflow-x: auto;
+  gap: 10px;
+  padding-bottom: 10px;
+}
+
+.city-tab {
+  padding: 10px 20px;
+  background: #f5f5f5;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.3s ease;
+}
+
+.city-tab:hover {
+  background: #e0e0e0;
+}
+
+.city-tab.active {
+  background: #ff5a60;
+  color: white;
+}
+
+.search-filter-section {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.search-box {
+  position: relative;
+  flex: 1;
+  min-width: 250px;
+}
+
+.search-box i {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #888;
+}
+
+.search-box input {
+  width: 100%;
+  padding: 12px 15px 12px 45px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.filter-toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  cursor: pointer;
+  position: relative;
+}
+
+.filter-indicator {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  width: 12px;
+  height: 12px;
+  background: #ff5a60;
+  border-radius: 50%;
+}
+
+.filters-panel {
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.filter-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #333;
+}
+
+.filter-group select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+.rating-filter {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.rating-option {
+  padding: 8px 12px;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.rating-option.active {
+  background: #ff5a60;
+  color: white;
+  border-color: #ff5a60;
+}
+
+.results-count {
+  margin-bottom: 20px;
+}
+
+.results-count p {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.attractions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 25px;
+}
+
+.attraction-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.attraction-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.card-image {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.attraction-card:hover .card-image img {
+  transform: scale(1.05);
+}
+
+.card-badge {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background: rgba(255, 90, 96, 0.9);
+  color: white;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.wishlist-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 36px;
+  height: 36px;
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.wishlist-btn:hover {
+  background: white;
+}
+
+.wishlist-btn i {
+  color: #ff5a60;
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.card-content h3 {
+  margin: 0 0 12px 0;
+  color: #333;
+  font-size: 1.3rem;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.star {
+  color: #ddd;
+  margin-right: 2px;
+}
+
+.star.full {
+  color: #ffc107;
+}
+
+.star.half {
+  position: relative;
+  color: #ffc107;
+}
+
+.rating-value {
+  margin-left: 8px;
+  color: #666;
+  font-weight: 600;
+}
+
+.description {
+  color: #666;
+  line-height: 1.5;
+  margin-bottom: 15px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.card-details {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  padding-top: 15px;
+  border-top: 1px solid #eee;
+}
+
+.duration {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #666;
+}
+
+.price {
+  font-weight: 600;
+  color: #ff5a60;
+  font-size: 1.1rem;
+}
+
+.card-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.details-btn, .book-btn {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.details-btn {
+  background: #f5f5f5;
+  color: #333;
+}
+
+.details-btn:hover {
+  background: #e0e0e0;
+}
+
+.book-btn {
+  background: #ff5a60;
+  color: white;
+}
+
+.book-btn:hover {
+  background: #ff4248;
+}
+
+.no-results {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 60px 20px;
+  color: #666;
+}
+
+.no-results i {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: #ddd;
+}
+
+.no-results h3 {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.loading-spinner {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid #ff5a60;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 20px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .attractions-container {
+    padding: 15px;
+  }
+  
+  .attractions-header h1 {
+    font-size: 2rem;
+  }
+  
+  .search-filter-section {
+    flex-direction: column;
+  }
+  
+  .search-box {
+    min-width: 100%;
+  }
+  
+  .filters-panel {
+    grid-template-columns: 1fr;
+  }
+  
+  .attractions-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .card-actions {
+    flex-direction: column;
+  }
+}

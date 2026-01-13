@@ -1,0 +1,98 @@
+/* BookingConfirmation.css */
+.booking-confirmation {
+  padding: 2rem 0;
+}
+
+.confirmation-card {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 3rem;
+  text-align: center;
+}
+
+.confirmation-header {
+  margin-bottom: 2rem;
+}
+
+.success-icon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.confirmation-header h1 {
+  color: var(--success);
+  margin-bottom: 1rem;
+}
+
+.confirmation-details {
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+.confirmation-details h2 {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.detail-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.detail-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.75rem;
+  background: var(--gray-100);
+  border-radius: var(--border-radius);
+}
+
+.label {
+  font-weight: 600;
+  color: var(--gray-700);
+}
+
+.next-steps {
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+.next-steps h2 {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.next-steps ol {
+  padding-left: 1.5rem;
+}
+
+.next-steps li {
+  margin-bottom: 0.5rem;
+  color: var(--gray-700);
+}
+
+.confirmation-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+  .confirmation-card {
+    padding: 2rem 1rem;
+  }
+  
+  .detail-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .confirmation-actions {
+    flex-direction: column;
+  }
+  
+  .confirmation-actions .btn {
+    width: 100%;
+  }
+}
